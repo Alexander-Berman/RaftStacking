@@ -38,7 +38,7 @@ number_z=2; //number of items 'stacked' in Z
 //## ---- END CONSTANTS---- ##//
 
 // GENERATING PLACEMENT INFORMATION
-if(MANUAL_GRID){
+if(!MANUAL_GRID){
   number_x = floor(Printer_X/(Object_Size_X + SIDE_PADDING));
   number_y = floor(Printer_Y/(Object_Size_Y + SIDE_PADDING));
   number_z = floor(Printer_Z/(Object_Size_Z + TOP_PADDING + RAFT_THICKNESS + BOTTOM_PADDING));
