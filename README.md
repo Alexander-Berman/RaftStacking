@@ -9,7 +9,7 @@ Given any 3D file, you need to record it's X,Y,Z dimensions in CAD or a slicer a
 (1)  Printing with Layer-Rafts: the script can generate one huge STL file that has both the stacks and a supporting raft, held up by a grid of optional walls surrounding each print. You will need to save supports to your design ahead of time if they are needed. dupontFemaleWireHolders4LEDs_Manufacture_5Layers.stl is an example file of this setting, where each item is a small holder for two female dupont jumper wires to fit snugly on the inside to host an LED on top, with wires outside and back in to keep everything robust and in-place.
 (SEPARATE_FILES = false;)
 
-<img src="one_layer.JPG"  width="300">
+<img src="images/one_layer.JPG"  width="300">
 
 <img src="images/item.JPG" width="300">
 
