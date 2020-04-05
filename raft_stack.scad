@@ -31,18 +31,16 @@ BOTTOM_PADDING = 0.25; //space below the model and the raft
 RAFT_THICKNESS = 1.5; //thickness of the raft. Thicker makes less prone to it falling apart under weight, but more time/material
 
 MANUAL_GRID = false; //if 'false': generates grid based on available printer volume. If 'true': uses numbers below
-number_x=7; //number of items in X direction
-number_y=7; //number of items in Y direction
-number_z=2; //number of items 'stacked' in Z
 
 //## ---- END CONSTANTS---- ##//
 
-// Generating Grid (if not manual)
-number_x = MANUAL_GRID==true ? number_x : floor(Printer_X/(Object_Size_X + SIDE_PADDING));
-number_y = MANUAL_GRID==true ? number_y : floor(Printer_Y/(Object_Size_Y + SIDE_PADDING));
-number_z = MANUAL_GRID==true ? number_z : floor(Printer_Z/(Object_Size_Z + TOP_PADDING + RAFT_THICKNESS + BOTTOM_PADDING));
+// Generating Grid (if not manual)  //replace numbers after '?' below to set manual numbers
+number_x = MANUAL_GRID==true ? 1 : floor(Printer_X/(Object_Size_X + SIDE_PADDING));
+number_y = MANUAL_GRID==true ? 1: floor(Printer_Y/(Object_Size_Y + SIDE_PADDING));
+number_z = MANUAL_GRID==true ? 3 : floor(Printer_Z/(Object_Size_Z + TOP_PADDING + RAFT_THICKNESS + BOTTOM_PADDING));
 
 echo(number_x,number_y,number_z);
+/////////////////////
 
 //Placing STLs
 translate([X_Offset,Y_Offset,Z_Offset]) cube([.1,.1,number_z*(Object_Size_Z+TOP_PADDING+BOTTOM_PADDING+RAFT_THICKNESS)]);//optional cube to trick Cura to thinking all objects are connected
